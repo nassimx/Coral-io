@@ -18,7 +18,9 @@ import {
   WebsiteRights,
 } from './FooterStyle';
 
-import LogoWhite from '../../../../assets/cropped-logo_coralio-6.png-6.png';
+import logoFooter from '../../../../assets/cropped-logo_coralio-6.png-6.png';
+import { AiOutlineLinkedin } from 'react-icons/ai';
+import { GrLinkedin } from 'react-icons/gr';
 const Footer = () => {
   return (
     <>
@@ -65,16 +67,24 @@ const Footer = () => {
           <SocialMedia>
             <SocialMediaWrap>
               <SocialLogo to="/">
-                <LogoFooter src={LogoWhite} />
+                <LogoFooter src={logoFooter} />
               </SocialLogo>
               <WebsiteRights>
                 © {new Date().getFullYear()} Coral-IO. Site Web par NassimDev
               </WebsiteRights>
               <SocialIcons>
-                <SocialIconLink href="/" target="_blank" aria-label="Facebook">
-                  <FaFacebook />
+                <SocialIconLink
+                  href="https://www.linkedin.com/company/coralio/"
+                  target="_blank"
+                  aria-label="Linkedin"
+                >
+                  <GrLinkedin />
                 </SocialIconLink>
-                <SocialIconLink href="/" target="_blank" aria-label="Facebook">
+                <SocialIconLink
+                  href="https://www.facebook.com/coralio.fr"
+                  target="_blank"
+                  aria-label="Facebook"
+                >
                   <FaFacebook />
                 </SocialIconLink>
                 <SocialIconLink href="/" target="_blank" aria-label="Facebook">

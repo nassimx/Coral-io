@@ -10,7 +10,7 @@ import {
   ImgWrapper,
   Img,
   ContentColumn,
-} from './ContentStyled';
+} from './ThirdSectionStyled';
 
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';

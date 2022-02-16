@@ -1,4 +1,5 @@
 import React from 'react';
+import { GrLanguage } from 'react-icons/gr';
 import {
   SidebarContainer,
   Icon,
@@ -19,15 +20,17 @@ const Sidebar = ({ isOpen, toggle }) => {
         </Icon>
         <SideBarWrapper>
           <SidebarMenu>
-            <SidebarLink to="about" onClick={toggle}>
-              About
+            <SidebarLink to="/" onClick={toggle}>
+              HOME
             </SidebarLink>
-            <SidebarLink to="about">About</SidebarLink>
-            <SidebarLink to="about">About</SidebarLink>
-            <SidebarLink to="about">About</SidebarLink>
+            <SidebarLink to="/services">SERVICES</SidebarLink>
+            <SidebarLink to="/about">ABOUT</SidebarLink>
+            <SidebarLink to="contact">CONTACT</SidebarLink>
           </SidebarMenu>
           <SideBtnWrap>
-            <SidebarRoute to="/sginin">sgin in</SidebarRoute>
+            <SidebarRoute>
+              <GrLanguage />
+            </SidebarRoute>
           </SideBtnWrap>
         </SideBarWrapper>
       </SidebarContainer>

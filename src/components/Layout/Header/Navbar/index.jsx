@@ -12,6 +12,7 @@ import {
 } from './Navbar.styles';
 import { FaBars } from 'react-icons/fa';
 import Logoimg from '../../../../../assets/cropped-logo_coralio-7.png-7-180x180.png';
+import { GrLanguage } from 'react-icons/gr';
 
 const Navbar = ({ toggle }) => {
   return (
@@ -26,20 +27,22 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="/about">About</NavLinks>
+              <NavLinks to="/">HOME</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/about">About</NavLinks>
+              <NavLinks to="/services">SERVICES</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/about">About</NavLinks>
+              <NavLinks to="/about">ABOUT</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/about">About</NavLinks>
+              <NavLinks to="/contact">CONTACT</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="/login">Login</NavBtnLink>
+            <NavBtnLink>
+              <GrLanguage />
+            </NavBtnLink>
           </NavBtn>
         </NavBarContainer>
       </Nav>
