@@ -12,8 +12,10 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 11;
   //trasparent
-  background: rgba(255, 255, 255, 0.95);
-
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  /* background: red; */
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
   }
@@ -83,6 +85,8 @@ export const NavLinks = styled(LinkR)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  font-family: 'Lato', sans-serif;
+
   &:hover {
     color: #0a66c2;
     transition: all 0.3s ease-out;
