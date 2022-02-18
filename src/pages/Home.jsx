@@ -4,17 +4,25 @@ import { ThirdSection } from '../components/Layout/Body/ThirdSection';
 import Footer from '../components/Layout/Footer';
 import { homeObjOne } from '../data//FirstSectionData';
 import { heroOne, heroThree, heroTwo } from '../data/ThirdSectionData';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
     <>
-      <Hero {...homeObjOne} />
-      <SecendSection />
-      <ThirdSection {...heroOne} />
-      <ThirdSection {...heroTwo} />
-      <ThirdSection {...heroThree} />
+      <motion.div
+        initial={{ scaleY: 0 }}
+        animate={{ scaleY: 1 }}
+        exit={{ scaleY: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <Hero {...homeObjOne} />
+        <SecendSection />
+        <ThirdSection {...heroOne} />
+        <ThirdSection {...heroTwo} />
+        <ThirdSection {...heroThree} />
 
-      <Footer />
+        <Footer />
+      </motion.div>
     </>
   );
 };
