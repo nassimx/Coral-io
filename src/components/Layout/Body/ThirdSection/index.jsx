@@ -89,7 +89,7 @@ export const ThirdSection = ({
               <Img
                 src={img}
                 alt={alt}
-                whileHover={{ rotate: 2, scale: 1.02 }}
+                whileHover={{ rotate: 2, scale: 1.05 }}
                 transition={{ duration: 0.5 }}
               />
             </ImgWrapper>

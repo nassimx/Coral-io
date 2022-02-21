@@ -3,6 +3,6 @@ export const homeObjOne = {
   title: 'Coral-IO',
   subtitle: 'Prenez la route du succès',
   description:
-    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum consequuntur sint sequi temporibus, ratione consequatur, debitis tempore, porro eius quae neque quo nesciunt. Omnis ut, vel vitae voluptatem tempore necessitatibus?',
+    'Née de l’union de deux ingénieurs surdoués, Coral-io se présente en tant qu’un intégrateur de solutions DevOps et monotoring depuis 2018. Coral-io prodigue à ses partenaires et clients un ensemble de conseils pour la réalisation des projets spécifiques, en DevOps, APM, et pour l’intégration des logiciels Micro-Focus.',
   buttonLabel: 'Rejoingez nous',
 };

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 // section 1
@@ -72,15 +73,19 @@ export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15% 0;
+  padding: 11% 0;
   /* check text al */
   /* margin-top: 20%; */
+  @media screen and (max-width: 480px) {
+    padding: 30% 0;
+  }
 `;
 
-export const HeroH1 = styled.h1`
+export const HeroH1 = styled(motion.h1)`
   color: #fff;
   font-size: 48px;
   text-align: center;
+  font-family: 'BunkenTechSansProWideW01-Bk';
 
   @media screen and (max-width: 768px) {
     font-size: 40px;
@@ -90,8 +95,9 @@ export const HeroH1 = styled.h1`
   }
 `;
 export const HeroH2 = styled.h2`
-  color: #fff;
-  font-size: 40px;
+  /* cf1717 ou ff7f50 */
+  color: #ff7f50;
+  font-size: 32px;
   text-align: center;
 
   @media screen and (max-width: 768px) {

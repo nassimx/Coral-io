@@ -25,7 +25,7 @@ const Features = () => {
     <Section smPadding="50px 10px" position="relative" inverse id="about">
       <Container>
         <FeatureTextWrapper>
-          <FeatureTitle>CE QUE NOUS OFFRONS</FeatureTitle>
+          <FeatureTitle>NOS SERVICES</FeatureTitle>
         </FeatureTextWrapper>
         <FeatureWrapper>
           {featuresData.map((el, index) => (

@@ -5,7 +5,7 @@ export const FeatureTitle = styled.h2`
   text-align: center;
   font-size: clamp(1.3rem, 13vw, 3.1rem);
   line-height: 1.06;
-  letter-spacing: 0.4rem;
+  /* letter-spacing: 0.4rem; */
   margin: auto;
 `;
 
@@ -43,7 +43,7 @@ export const FeatureColumn = styled(motion.div)`
 export const FeatureImageWrapper = styled.div`
   margin-bottom: 1rem;
   border-radius: 50%;
-  border: 2px solid #000;
+  border: 2px solid #cf1717;
   padding: 30px;
 `;
 export const FeatureName = styled.h3`

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook } from 'react-icons/fa';
+import { FaFacebook, FaMailBulk } from 'react-icons/fa';
 import {
   FooterContainer,
   FooterLink,
@@ -20,7 +20,7 @@ import {
 
 import logoFooter from '../../../../assets/cropped-logo_coralio-6.png-6.png';
 import { AiOutlineLinkedin } from 'react-icons/ai';
-import { GrLinkedin } from 'react-icons/gr';
+import { GrLinkedin, GrMail } from 'react-icons/gr';
 const Footer = () => {
   return (
     <>
@@ -87,8 +87,12 @@ const Footer = () => {
                 >
                   <FaFacebook />
                 </SocialIconLink>
-                <SocialIconLink href="/" target="_blank" aria-label="Facebook">
-                  <FaFacebook />
+                <SocialIconLink
+                  href="mailto:contact@coral-io.fr"
+                  target="_blank"
+                  aria-label="Mail"
+                >
+                  <GrMail />
                 </SocialIconLink>
               </SocialIcons>
             </SocialMediaWrap>
