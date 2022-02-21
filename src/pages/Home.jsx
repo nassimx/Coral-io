@@ -5,24 +5,26 @@ import Footer from '../components/Layout/Footer';
 import { homeObjOne } from '../data//FirstSectionData';
 import { heroOne, heroThree, heroTwo } from '../data/ThirdSectionData';
 import { motion } from 'framer-motion';
+import FouthSection from '../components/Layout/Body/fourthSection';
 
 const Home = () => {
   return (
     <>
-      <motion.div
+      {/* <motion.div
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 1 }}
         exit={{ scaleY: 0 }}
         transition={{ duration: 0.6 }}
-      >
-        <Hero {...homeObjOne} />
-        <SecendSection />
-        <ThirdSection {...heroOne} />
-        <ThirdSection {...heroTwo} />
-        <ThirdSection {...heroThree} />
+      > */}
+      <Hero {...homeObjOne} />
+      <SecendSection />
+      <ThirdSection {...heroOne} />
+      <ThirdSection {...heroTwo} />
+      <ThirdSection {...heroThree} />
+      <FouthSection />
 
-        <Footer />
-      </motion.div>
+      <Footer />
+      {/* </motion.div> */}
     </>
   );
 };

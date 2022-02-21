@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;;
   }
 `;
 
@@ -29,15 +29,16 @@ export const MainHeading = styled.h1`
 `;
 
 export const Heading = styled.h2`
+  /* display: flex; */
   font-size: clamp(1.3rem, 13vw, 3.1rem);
   margin: ${({ margin }) => (margin ? margin : '')};
   margin-bottom: ${({ mb }) => (mb ? mb : '')};
   margin-top: ${({ mt }) => (mt ? mt : '')};
   color: ${({ inverse }) => (inverse ? '$403ae3' : '#fff')};
-  letter-spacing: 0.4rem;
+  /* letter-spacing: 0.4rem; */
   line-height: 1.06;
   text-align: center;
-  width: ${({ width }) => (width ? width : '100%')};
+  width: ${({ width }) => (width ? width : '90%')};
 `;
 export const TextWrapper = styled.span`
   color: ${({ color }) => (color ? color : '')};
@@ -105,14 +106,14 @@ export const Button = styled.button`
   white-space: nowrap;
   padding: 10px 20px;
   font-size: 16px;
-  color: #fff;
+  color: #ff7f50;
   outline: none;
-  border: 2px solid #fff;
+  border: 2px solid #ff7f50;
   cursor: pointer;
   overflow: hidden;
   position: relative;
   &:before {
-    background: #fff;
+    background: #ff7f50;
     content: '';
     position: absolute;
     top: 50%;
