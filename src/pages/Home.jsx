@@ -23,7 +23,7 @@ const Home = () => {
       <ThirdSection {...heroThree} />
       <FouthSection />
 
-      <Footer />
+      {/* <Footer /> */}
       {/* </motion.div> */}
     </>
   );

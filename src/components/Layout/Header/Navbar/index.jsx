@@ -9,17 +9,22 @@ import {
   NavLinks,
   NavBtn,
   NavBtnLink,
+  ContactNavLink,
 } from './Navbar.styles';
 import { FaBars } from 'react-icons/fa';
 import Logoimg from '../../../../../assets/cropped-logo_coralio-7.png-7-180x180.png';
 import { GrLanguage } from 'react-icons/gr';
+import { animateScroll as scroll } from 'react-scroll';
 
 const Navbar = ({ toggle }) => {
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
   return (
     <>
       <Nav>
         <NavBarContainer>
-          <NavLogo to="/">
+          <NavLogo to="/" onClick={toggleHome}>
             <Logo src={Logoimg} />
           </NavLogo>
           <MobileIcon onClick={toggle}>
@@ -27,16 +32,46 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="/">Accueil</NavLinks>
+              <NavLinks
+                to="/"
+                smooth={true}
+                duration={1000}
+                spy={true}
+                exact="true"
+                offset={-80}
+                activeClass="active"
+                onClick={toggleHome}
+              >
+                Accueil
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/services">Nos Services</NavLinks>
+              <NavLinks
+                to="services"
+                smooth={true}
+                duration={1000}
+                spy={true}
+                exact="true"
+                offset={-80}
+                activeClass="active"
+              >
+                Services
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/about">Nos partenaires et clients</NavLinks>
+              <NavLinks
+                to="partenaires"
+                smooth={true}
+                duration={1000}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Nos partenaires et clients
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/contact">Contact</NavLinks>
+              <ContactNavLink to="/contact">Contact</ContactNavLink>
             </NavItem>
           </NavMenu>
           <NavBtn>
