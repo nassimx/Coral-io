@@ -28,7 +28,7 @@ export const ImageWrapper = styled.div`
 
 export const ButtonContainer = styled(Row)`
   margin: 0px 0px 64px 0px;
-  padding: 0 0 20px 0px;
+  /* padding: 0 0 20px 0px; */
   & svg {
     margin: 0 1rem;
     cursor: pointer;
@@ -39,6 +39,7 @@ export const ButtonContainer = styled(Row)`
   }
   @media screen and (max-width: 960px) {
     margin: 1rem auto;
+    /* display: none; */
   }
 `;
 
@@ -46,7 +47,7 @@ export const ReviewSlider = styled(Slider)`
   width: 100%;
   .slick-track {
     display: flex;
-    padding: 20px 0px;
+    /* padding: 20px 0px; */
     gap: 2rem;
   }
   .slick-slide {

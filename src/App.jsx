@@ -7,20 +7,24 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Footer from './components/Layout/Footer';
 
 function App() {
   const location = useLocation();
   return (
     <>
       <GlobalStyle />
-      <Header />
+
+      {location.pathname !== '/contact' && <Header />}
+      {/* <Header /> */}
       {/* <AnimatePresence exitBeforeEnter initial={false}> */}
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/services" element={<Services />} /> */}
+        {/* <Route path="/about" element={<About />} /> */}
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
       {/* </AnimatePresence> */}
     </>
   );

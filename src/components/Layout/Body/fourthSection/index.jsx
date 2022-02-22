@@ -23,7 +23,13 @@ const FouthSection = () => {
     pauseOnHover: true,
   };
   return (
-    <Section margin="auto" maxWidth="1280px" padding="50px 70px" inverse>
+    <Section
+      margin="auto"
+      maxWidth="1280px"
+      padding="70px"
+      inverse
+      id="partenaires"
+    >
       <Row justify="space-between" margin="1rem" wrap="wrap">
         <Heading width="auto" inverse>
           NOS PARTENAIRES ET CLIENTS

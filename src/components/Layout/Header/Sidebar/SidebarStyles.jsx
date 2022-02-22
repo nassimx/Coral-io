@@ -1,7 +1,7 @@
 import { FaTimes } from 'react-icons/fa';
 import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
-
+import { Link as LinkS } from 'react-scroll';
 export const SidebarContainer = styled.aside`
   position: fixed;
   z-index: 999;
@@ -37,7 +37,25 @@ export const SideBarWrapper = styled.div`
   color: black;
 `;
 
-export const SidebarLink = styled(LinkR)`
+export const SidebarLink = styled(LinkS)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+
+  &:hover {
+    color: #0a66c2;
+    transition: 0.2s ease-in-out;
+  }
+`;
+
+export const ContactSidebarLink = styled(LinkR)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,9 +88,9 @@ export const SidebarMenu = styled.ul`
   }
 `;
 
-export const SidebarRoute = styled.div`
+export const SidebarRoute = styled(LinkR)`
   border-radius: 50px;
-  background: #ff7f50;
+  /* background: #ff7f50; */
   white-space: nowrap;
   padding: 16px 20px;
   color: aqua;

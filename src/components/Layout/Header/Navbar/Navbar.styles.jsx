@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
+import { Link as LinkS } from 'react-scroll';
 
 export const Nav = styled.nav`
   display: flex;
@@ -77,7 +78,7 @@ export const NavItem = styled.li`
   height: 80px;
 `;
 
-export const NavLinks = styled(LinkR)`
+export const NavLinks = styled(LinkS)`
   color: black;
   display: flex;
   align-items: center;
@@ -100,6 +101,25 @@ export const NavBtn = styled.nav`
   align-items: center;
   @media screen and (max-width: 768px) {
     display: none;
+  }
+`;
+
+export const ContactNavLink = styled(LinkR)`
+  color: black;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+
+  &:hover {
+    color: #0a66c2;
+    transition: all 0.3s ease-out;
+  }
+  &active {
+    border-bottom: 3px solid #01bf71;
   }
 `;
 

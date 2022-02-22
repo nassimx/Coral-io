@@ -7,6 +7,7 @@ export const FeatureTitle = styled.h2`
   line-height: 1.06;
   /* letter-spacing: 0.4rem; */
   margin: auto;
+  /* padding: 40px 0 0 0; */
 `;
 
 export const FeatureTextWrapper = styled.div`

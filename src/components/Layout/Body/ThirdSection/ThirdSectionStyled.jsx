@@ -33,7 +33,7 @@ export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
   @media screen and (max-width: 768px) {
-    padding-bottom: 65px;
+    /* padding-bottom: 65px; */
     > h1,
     p {
       text-align: center;

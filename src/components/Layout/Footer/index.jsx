@@ -21,7 +21,12 @@ import {
 import logoFooter from '../../../../assets/cropped-logo_coralio-6.png-6.png';
 import { AiOutlineLinkedin } from 'react-icons/ai';
 import { GrLinkedin, GrMail } from 'react-icons/gr';
+import { animateScroll as scroll } from 'react-scroll';
+
 const Footer = () => {
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
   return (
     <>
       <FooterContainer>
@@ -66,11 +71,18 @@ const Footer = () => {
 
           <SocialMedia>
             <SocialMediaWrap>
-              <SocialLogo to="/">
+              <SocialLogo to="/" onClick={toggleHome}>
                 <LogoFooter src={logoFooter} />
               </SocialLogo>
               <WebsiteRights>
-                © {new Date().getFullYear()} Coral-IO. Site Web par NassimDev
+                © {new Date().getFullYear()} Coral-IO. Site Web par{' '}
+                <a
+                  style={{ textDecoration: 'none', color: '#1E88E5' }}
+                  href="https://cutt.ly/nassimdev"
+                  target="_blank"
+                >
+                  NassimDev
+                </a>
               </WebsiteRights>
               <SocialIcons>
                 <SocialIconLink
