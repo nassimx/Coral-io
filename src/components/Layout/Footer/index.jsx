@@ -4,6 +4,7 @@ import {
   FooterContainer,
   FooterLink,
   FooterLinkItems,
+  FooterLinkS,
   FooterLinksContainer,
   FooterLinksWrapper,
   FooterLinkTitle,
@@ -27,6 +28,12 @@ const Footer = () => {
   const toggleHome = () => {
     scroll.scrollToTop();
   };
+  const toggleDown = () => {
+    scroll.scrollTo(3800);
+  };
+  const toggleService = () => {
+    scroll.scrollTo(700);
+  };
   return (
     <>
       <FooterContainer>
@@ -34,39 +41,28 @@ const Footer = () => {
           <FooterLinksContainer>
             <FooterLinksWrapper>
               <FooterLinkItems>
-                <FooterLinkTitle>About US</FooterLinkTitle>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
+                <FooterLinkTitle>À propos de nous</FooterLinkTitle>
+                <FooterLink onClick={toggleHome} to="/">
+                  Accueil
+                </FooterLink>
               </FooterLinkItems>
               <FooterLinkItems>
-                <FooterLinkTitle>About US</FooterLinkTitle>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
+                <FooterLinkTitle>Services</FooterLinkTitle>
+                <FooterLink onClick={toggleService} to="/">
+                  Caractéristiques
+                </FooterLink>
               </FooterLinkItems>
               <FooterLinkItems>
-                <FooterLinkTitle>About US</FooterLinkTitle>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
+                <FooterLinkTitle>Nos partenaires</FooterLinkTitle>
+                <FooterLink onClick={toggleDown} to="/">
+                  How it work
+                </FooterLink>
               </FooterLinkItems>
               <FooterLinkItems>
-                <FooterLinkTitle>About US</FooterLinkTitle>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
-                <FooterLink to="/">How it work</FooterLink>
+                <FooterLinkTitle>Rejoingez nous</FooterLinkTitle>
+                <FooterLink to="/contact">Contact</FooterLink>
               </FooterLinkItems>
             </FooterLinksWrapper>
-            {/* <Maploc src="https://s3.amazonaws.com/assets.fullstack.io/n/20200317063311541_react-google-maps.png" /> */}
           </FooterLinksContainer>
 
           <SocialMedia>
