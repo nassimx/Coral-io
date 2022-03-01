@@ -3,9 +3,9 @@ import GlobalStyle from './globalStyles';
 import { AnimatePresence } from 'framer-motion';
 
 import Header from './pages/Header';
-import About from './pages/About';
+// import About from './pages/About';
 import Home from './pages/Home';
-import Services from './pages/Services';
+// import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Footer from './components/Layout/Footer';
 

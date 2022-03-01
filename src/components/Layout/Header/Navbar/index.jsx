@@ -55,7 +55,7 @@ const Navbar = ({ toggle }) => {
                 offset={-80}
                 activeClass="active"
               >
-                Services
+                Nos Services
               </NavLinks>
             </NavItem>
             <NavItem>
@@ -67,7 +67,7 @@ const Navbar = ({ toggle }) => {
                 exact="true"
                 offset={-80}
               >
-                Nos partenaires et clients
+                Nos Partenaires et Clients
               </NavLinks>
             </NavItem>
             <NavItem>

@@ -1,53 +1,24 @@
-import React from 'react';
-
-import { BsFillShieldLockFill } from 'react-icons/bs';
-import { IoIosOptions } from 'react-icons/io';
-import { AiOutlineCloudUpload } from 'react-icons/ai';
-import { BiSupport, BiDollar } from 'react-icons/bi';
-import { GrHostMaintenance } from 'react-icons/gr';
-// const iconStyle = (Icon) => <Icon size="3rem" color="#0f0f0f" />;
-
+import { faGears, faChartPie } from '@fortawesome/free-solid-svg-icons';
+import { faSquareFull } from '@fortawesome/free-regular-svg-icons';
 export const featuresData = [
   {
-    name: 'caractéristique1',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nemo tenetur fuga maxime. Velit nostrum voluptas ullam eaque maiores. Perferendis esse culpa suscipit et adipisci soluta rem recusandae odit sapiente?',
-    // icon: iconStyle(BsFillShieldLockFill),
+    name: 'DevOps',
+    description: `DevOps n’est pas une simple approche, c’est une double compétence (development & IT opertations) de plus en plus recherchée et essentielle pour toute organisation. Et ce n’est pas pour rien que les entreprises, cherchant à progresser à une vitesse grand V,  mettent en place des processus DevOps. Coral-io a l'expertise technique nécessaire pour vous accompagner à suivre les tendances business du marché IT.`,
+    icon: faGears,
     imgClass: 'one',
   },
   {
-    name: 'caractéristique2',
+    name: 'APM',
     description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quidem unde, cum recusandae voluptatibus qui similique? Nobis repudiandae aperiam corrupti, corporis molestias perspiciatis animi eveniet nostrum aliquam, saepe iusto nemo.',
-    // icon: iconStyle(IoIosOptions),
+      'Assurer une expérience utilisateur irréprochable est l’objectif de chaque entreprise. C’est pourquoi, il faut veiller à analyser la performance de ses applications, en adoptant des mesures techniques et une supervision précises.  Coral-io s’appuie sur ses expertises pour vous proposer ses solutions APM (Application Performance Monitoring) en accord avec vos besoins.',
+    icon: faChartPie,
     imgClass: 'two',
   },
   {
-    name: 'caractéristique3',
+    name: 'Intégrateur de solution Micro Focus',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius ipsum blanditiis provident harum assumenda cum labore eos! Tempora minima omnis a sint beatae dicta. Rem, aut! Delectus, qui harum.',
-    // icon: iconStyle(GrHostMaintenance),
+      'Etant Gold Partner de Micro Focus, l’un des plus grands fournisseurs de logiciels d’entreprise au monde, Coral-io est revendeur de ses licences logicielles. Ce partenariat nous permet d’assister nos clients lors de leurs transformations digitales, avec moins de risques et en assurant une rentabilité durable.',
+    icon: faSquareFull,
     imgClass: 'three',
-  },
-  {
-    name: 'caractéristique4',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, inventore quidem et beatae sint, nobis, minus odit ipsum suscipit omnis sequi. Voluptatem, distinctio incidunt in aut excepturi veniam et consectetur!',
-    // icon: iconStyle(BiSupport),
-    imgClass: 'four',
-  },
-  {
-    name: 'caractéristique5',
-    description:
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem beatae laboriosam rem vero enim quidem recusandae assumenda eum explicabo dolores voluptate, exercitationem minima nam voluptates ad nesciunt, ipsa quae reiciendis.',
-    // icon: iconStyle(BiDollar),
-    imgClass: 'five',
-  },
-  {
-    name: 'caractéristique6',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis dolores impedit sequi autem dicta, expedita id eaque deserunt quisquam quis? Voluptatum, aspernatur accusamus cum maxime doloremque ea impedit quas aperiam. ',
-    // icon: iconStyle(AiOutlineCloudUpload),
-    imgClass: 'six',
   },
 ];

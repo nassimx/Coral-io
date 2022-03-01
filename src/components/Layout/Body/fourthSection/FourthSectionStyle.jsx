@@ -53,6 +53,7 @@ export const ReviewSlider = styled(Slider)`
   .slick-slide {
     display: flex;
     justify-content: center;
+
     margin-bottom: 1;
     outline: none;
   }

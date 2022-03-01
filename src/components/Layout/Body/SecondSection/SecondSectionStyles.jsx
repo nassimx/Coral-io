@@ -36,7 +36,7 @@ export const FeatureColumn = styled(motion.div)`
   justify-content: center;
   align-items: center;
   background: #f3f3f3;
-  padding: 10px;
+  padding: 20px;
   box-shadow: 0 0 32px 8px #d0d0d0;
   border-radius: 20px;
 `;
@@ -44,8 +44,12 @@ export const FeatureColumn = styled(motion.div)`
 export const FeatureImageWrapper = styled.div`
   margin-bottom: 1rem;
   border-radius: 50%;
-  border: 2px solid #cf1717;
-  padding: 30px;
+  /* border: 2px solid #cf1717; */
+  color: #5cacff;
+  padding: 10px;
+  :hover {
+    /* color: white; */
+  }
 `;
 export const FeatureName = styled.h3`
   font-weight: 600;

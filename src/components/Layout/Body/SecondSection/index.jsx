@@ -10,6 +10,7 @@ import {
   FeatureTextWrapper,
 } from './SecondSectionStyles';
 import { featuresData } from '../../../../data/SecondSectionData';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Features = () => {
   const initial = {
@@ -25,7 +26,7 @@ const Features = () => {
     <Section smPadding="50px 10px" position="relative" inverse id="services">
       <Container>
         <FeatureTextWrapper>
-          <FeatureTitle>SERVICES</FeatureTitle>
+          <FeatureTitle>NOS SERVICES</FeatureTitle>
         </FeatureTextWrapper>
         <FeatureWrapper>
           {featuresData.map((el, index) => (
@@ -41,7 +42,8 @@ const Features = () => {
               key={index}
             >
               <FeatureImageWrapper className={el.imgClass}>
-                {el.icon}
+                <FontAwesomeIcon icon={el.icon} size="4x" />
+                {/* {el.icon} */}
               </FeatureImageWrapper>
               <FeatureName>{el.name}</FeatureName>
               <FeatureText>{el.description}</FeatureText>
