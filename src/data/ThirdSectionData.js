@@ -2,14 +2,15 @@ export const heroOne = {
   reverse: true,
   inverse: true,
   topLine: {
-    text: 'subtitle',
+    text: 'Ils comptent sur nous',
   },
-  headline: 'Title',
-  description:
-    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum consequuntur sint sequi temporibus, ratione consequatur, debitis tempore, porro eius quae neque quo nesciunt. Omnis ut, vel vitae voluptatem tempore necessitatibus?',
-  buttonLabel: 'Go To',
+  headline: 'Nos Clients',
+  description: `Coral-io forge des liens solides avec ses clients pour saisir leurs besoins et y répondre afin d’atteindre d’excellents résultats.
+
+  Vous aspirez à rivaliser au niveau mondial et à prendre la route du succès ? Profitez de notre expertise et de nos connaissances techniques quelque soit votre secteur d’activité.`,
+  buttonLabel: 'Découvrez nos références',
   imgStart: 'start',
-  img: '../../assets/prod1.svg',
+  img: '../../assets/business_deal.svg',
   start: 'true',
 };
 

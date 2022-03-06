@@ -104,7 +104,7 @@ export const NavBtn = styled.nav`
   }
 `;
 
-export const ContactNavLink = styled(LinkR)`
+export const NavLinkR = styled(LinkR)`
   color: black;
   display: flex;
   align-items: center;

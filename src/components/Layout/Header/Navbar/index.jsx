@@ -9,7 +9,7 @@ import {
   NavLinks,
   NavBtn,
   NavBtnLink,
-  ContactNavLink,
+  NavLinkR,
 } from './Navbar.styles';
 import { FaBars } from 'react-icons/fa';
 import Logoimg from '../../../../../assets/cropped-logo_coralio-7.png-7-180x180.png';
@@ -60,6 +60,18 @@ const Navbar = ({ toggle }) => {
             </NavItem>
             <NavItem>
               <NavLinks
+                to="clinets"
+                smooth={true}
+                duration={1000}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Nos Clients
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks
                 to="partenaires"
                 smooth={true}
                 duration={1000}
@@ -67,11 +79,11 @@ const Navbar = ({ toggle }) => {
                 exact="true"
                 offset={-80}
               >
-                Nos Partenaires et Clients
+                Nos Partenaires
               </NavLinks>
             </NavItem>
             <NavItem>
-              <ContactNavLink to="/contact">Contact</ContactNavLink>
+              <NavLinkR to="/contact">Nous écrire</NavLinkR>
             </NavItem>
           </NavMenu>
           <NavBtn>

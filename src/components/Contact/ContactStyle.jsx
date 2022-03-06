@@ -210,7 +210,8 @@ export const ContactTitle = styled.h2`
   font-size: clamp(1rem, 13vw, 2rem);
   line-height: 1.06;
   /* letter-spacing: 0.4rem; */
-  padding: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 `;
 
 export const ContactContainer = styled.div`

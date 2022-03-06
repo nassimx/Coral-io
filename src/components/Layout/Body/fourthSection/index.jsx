@@ -35,7 +35,7 @@ const FouthSection = () => {
     >
       <Row justify="space-between" margin="1rem" wrap="wrap">
         <Heading width="auto" inverse>
-          NOS PARTENAIRES ET CLIENTS
+          NOS PARTENAIRES
         </Heading>
         <ButtonContainer>
           <IconContext.Provider value={{ size: '3rem', color: '#1d609c' }}>
