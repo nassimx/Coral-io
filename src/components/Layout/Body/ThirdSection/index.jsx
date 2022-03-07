@@ -11,6 +11,7 @@ import {
   Img,
   ContentColumn,
 } from './ThirdSectionStyled';
+import { Link } from 'react-router-dom';
 
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
@@ -41,7 +42,7 @@ export const ThirdSection = ({
   }, [inView, animation]);
 
   return (
-    <Section inverse={inverse} ref={ref}>
+    <Section inverse={inverse} ref={ref} id="clients">
       <Container>
         <ContentRow reverse={reverse}>
           <ContentColumn>
@@ -69,15 +70,17 @@ export const ThirdSection = ({
               >
                 {description}
               </Subtitle>
-              <ContentButton
-                initial={initial}
-                transition={{ delay: 1, duration: 0.6 }}
-                animate={animation}
-                inverse={inverse}
-                primary={primary}
-              >
-                {buttonLabel}
-              </ContentButton>
+              <Link to="/clients">
+                <ContentButton
+                  initial={initial}
+                  transition={{ delay: 1, duration: 0.6 }}
+                  animate={animation}
+                  inverse={inverse}
+                  primary={primary}
+                >
+                  {buttonLabel}
+                </ContentButton>
+              </Link>
             </TextWrapper>
           </ContentColumn>
           <ContentColumn

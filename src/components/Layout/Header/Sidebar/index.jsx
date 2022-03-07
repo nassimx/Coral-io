@@ -12,6 +12,7 @@ import {
   ContactSidebarLink,
 } from './SidebarStyles';
 import { animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 const Sidebar = ({ isOpen, toggle }) => {
   const toggleHome = () => {
@@ -31,7 +32,6 @@ const Sidebar = ({ isOpen, toggle }) => {
               smooth={true}
               duration={1000}
               spy={true}
-              exact="true"
               offset={-80}
               onClick={toggleHome}
             >
@@ -42,25 +42,39 @@ const Sidebar = ({ isOpen, toggle }) => {
               smooth={true}
               duration={1000}
               spy={true}
-              exact="true"
               offset={-80}
               activeClass="active"
               onClick={toggle}
             >
-              Services
+              Nos Services
+            </SidebarLink>
+            <SidebarLink
+              to="clients"
+              smooth={true}
+              duration={1000}
+              spy={true}
+              offset={-80}
+              onClick={toggle}
+            >
+              <Link
+                to="/clients"
+                style={{ textDecoration: 'none', color: 'black' }}
+              >
+                Nos Clients
+              </Link>
             </SidebarLink>
             <SidebarLink
               to="partenaires"
               smooth={true}
               duration={1000}
               spy={true}
-              exact="true"
               offset={-80}
               onClick={toggle}
             >
-              Nos partenaires et clients
+              Nos Partenaires
             </SidebarLink>
-            <ContactSidebarLink to="/contact">Contact</ContactSidebarLink>
+
+            <ContactSidebarLink to="/contact">Nous Écrire</ContactSidebarLink>
           </SidebarMenu>
           <SideBtnWrap>
             <SidebarRoute to="/" onClick={toggle}>

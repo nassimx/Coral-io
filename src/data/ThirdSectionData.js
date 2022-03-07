@@ -1,6 +1,7 @@
 export const heroOne = {
   reverse: true,
   inverse: true,
+  id: 'clients',
   topLine: {
     text: 'Ils comptent sur nous',
   },

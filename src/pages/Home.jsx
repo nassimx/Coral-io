@@ -10,21 +10,21 @@ import FouthSection from '../components/Layout/Body/fourthSection';
 const Home = () => {
   return (
     <>
-      {/* <motion.div
-        initial={{ scaleY: 0 }}
-        animate={{ scaleY: 1 }}
-        exit={{ scaleY: 0 }}
-        transition={{ duration: 0.6 }}
-      > */}
-      <Hero {...homeObjOne} />
-      <SecendSection />
-      <ThirdSection {...heroOne}/>
-      <ThirdSection {...heroTwo} />
-      <ThirdSection {...heroThree} />
-      <FouthSection />
+      <motion.div
+        initial={{ opacity: 0, x: 0, y: 100 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        exit={{ opacity: 0, x: 0, y: -100 }}
+        transition={{ duration: 1 }}
+      >
+        <Hero {...homeObjOne} />
+        <SecendSection />
+        <ThirdSection {...heroOne} />
+        <ThirdSection {...heroTwo} />
+        <ThirdSection {...heroThree} />
+        <FouthSection />
 
-      {/* <Footer /> */}
-      {/* </motion.div> */}
+        {/* <Footer /> */}
+      </motion.div>
     </>
   );
 };

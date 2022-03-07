@@ -20,6 +20,7 @@ const Navbar = ({ toggle }) => {
   const toggleHome = () => {
     scroll.scrollToTop();
   };
+
   return (
     <>
       <Nav>
@@ -32,18 +33,9 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks
-                to="/"
-                smooth={true}
-                duration={1000}
-                spy={true}
-                exact="true"
-                offset={-80}
-                activeClass="active"
-                onClick={toggleHome}
-              >
+              <NavLinkR to="/" onClick={toggleHome}>
                 Accueil
-              </NavLinks>
+              </NavLinkR>
             </NavItem>
             <NavItem>
               <NavLinks
@@ -51,7 +43,6 @@ const Navbar = ({ toggle }) => {
                 smooth={true}
                 duration={1000}
                 spy={true}
-                exact="true"
                 offset={-80}
                 activeClass="active"
               >
@@ -60,12 +51,12 @@ const Navbar = ({ toggle }) => {
             </NavItem>
             <NavItem>
               <NavLinks
-                to="clinets"
+                to="clients"
                 smooth={true}
                 duration={1000}
                 spy={true}
-                exact="true"
                 offset={-80}
+                activeClass="active"
               >
                 Nos Clients
               </NavLinks>
@@ -76,14 +67,13 @@ const Navbar = ({ toggle }) => {
                 smooth={true}
                 duration={1000}
                 spy={true}
-                exact="true"
                 offset={-80}
               >
                 Nos Partenaires
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinkR to="/contact">Nous écrire</NavLinkR>
+              <NavLinkR to="/contact">Nous Écrire</NavLinkR>
             </NavItem>
           </NavMenu>
           <NavBtn>

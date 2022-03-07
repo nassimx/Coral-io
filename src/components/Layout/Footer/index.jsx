@@ -29,10 +29,14 @@ const Footer = () => {
     scroll.scrollToTop();
   };
   const toggleDown = () => {
-    scroll.scrollTo(3800);
+    scroll.scrollTo(3550);
   };
   const toggleService = () => {
     scroll.scrollTo(700);
+  };
+
+  const toggleClients = () => {
+    scroll.scrollTo(1400);
   };
   return (
     <>
@@ -47,15 +51,19 @@ const Footer = () => {
                 </FooterLink>
               </FooterLinkItems>
               <FooterLinkItems>
-                <FooterLinkTitle>Services</FooterLinkTitle>
+                <FooterLinkTitle>Nos Services</FooterLinkTitle>
                 <FooterLink onClick={toggleService} to="/">
                   Caractéristiques
                 </FooterLink>
               </FooterLinkItems>
               <FooterLinkItems>
-                <FooterLinkTitle>Nos partenaires</FooterLinkTitle>
+                <FooterLinkTitle>Nos Clients</FooterLinkTitle>
+                <FooterLink to="/clients">Références</FooterLink>
+              </FooterLinkItems>
+              <FooterLinkItems>
+                <FooterLinkTitle>Nos Partenaires</FooterLinkTitle>
                 <FooterLink onClick={toggleDown} to="/">
-                  How it work
+                  Nos Partenaires
                 </FooterLink>
               </FooterLinkItems>
               <FooterLinkItems>
