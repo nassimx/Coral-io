@@ -26,24 +26,28 @@ export const data = [
   },
 ];
 
-export const sliderSettings = {
-  arrows: false,
-  slidesToShow: 3,
-  focusOnselect: false,
-  accessability: false,
-  responsive: [
-    {
-      breakpoint: 1280,
-      settings: {
-        slidesToShow: 2,
-      },
-    },
+// export const sliderSettings = {
+//   arrows: false,
+//   slidesToShow: 3,
+//   slidesToScroll: 1,
+//   autoplay: true,
+//   autoplaySpeed: 2000,
+//   pauseOnHover: true,
+//   focusOnselect: false,
+//   accessability: false,
+//   responsive: [
+//     {
+//       breakpoint: 1280,
+//       settings: {
+//         slidesToShow: 2,
+//       },
+//     },
 
-    {
-      breakpoint: 900,
-      settings: {
-        slidesToShow: 1,
-      },
-    },
-  ],
-};
+//     {
+//       breakpoint: 900,
+//       settings: {
+//         slidesToShow: 1,
+//       },
+//     },
+//   ],
+// };

@@ -17,7 +17,7 @@ import {
   SocialMedia,
   SocialMediaWrap,
   WebsiteRights,
-} from './FooterStyle';
+} from './Footer.Style';
 
 import logoFooter from '../../../../assets/cropped-logo_coralio-6.png-6.png';
 import { AiOutlineLinkedin } from 'react-icons/ai';

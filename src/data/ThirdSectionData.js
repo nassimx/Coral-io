@@ -7,7 +7,6 @@ export const heroOne = {
   },
   headline: 'Nos Clients',
   description: `Coral-io forge des liens solides avec ses clients pour saisir leurs besoins et y répondre afin d’atteindre d’excellents résultats.
-
   Vous aspirez à rivaliser au niveau mondial et à prendre la route du succès ? Profitez de notre expertise et de nos connaissances techniques quelque soit votre secteur d’activité.`,
   buttonLabel: 'Découvrez nos références',
   imgStart: 'start',

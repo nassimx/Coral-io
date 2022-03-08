@@ -6,9 +6,9 @@ import img from '../../assets/bgimg.jpeg';
 import Container from '../components/Contact/Container';
 
 import CompanyInfo from './Form/CompanyInfo';
-import ContactForm from '../pages/Form/ContactForm';
+// import ContactForm from '../pages/Form/ContactForm';
 
-import MapSection from '../components/Map'; // import the map here
+import MapSection from '../components/Map/Map'; // import the map here
 import NavBarChange from '../components/Layout/Header/Navbar/NavBarChange';
 import {
   HeroBg,

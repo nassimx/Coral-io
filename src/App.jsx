@@ -10,6 +10,10 @@ import Contact from './pages/Contact';
 import Footer from './components/Layout/Footer';
 import Clients from './pages/Clients';
 import { useEffect } from 'react';
+import Login from './pages/login';
+import PrivateRoute from './components/PrivateRoute';
+import { UserAuthContextProvider } from './context/UserAuthContext';
+import Admin from './pages/Admin';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -24,17 +28,28 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <AnimatePresence exitBeforeEnter initial={false}>
-        <ScrollToTop />
+      {/* <AnimatePresence exitBeforeEnter initial={false}> */}
+      <ScrollToTop />
+      <UserAuthContextProvider>
         <Routes>
           <Route element={<Header />}>
             <Route path="/" element={<Home />} />
           </Route>
+          <Route
+            path="/admin"
+            element={
+              <PrivateRoute>
+                <Admin />
+              </PrivateRoute>
+            }
+          />
           <Route path="/clients" element={<Clients />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
-        <Footer />
-      </AnimatePresence>
+      </UserAuthContextProvider>
+      <Footer />
+      {/* </AnimatePresence> */}
     </>
   );
 }
