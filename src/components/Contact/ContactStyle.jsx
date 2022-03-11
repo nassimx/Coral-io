@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-
 export const SectionContact = styled.div`
   display: flex;
   background-color: #fff;
@@ -16,32 +15,32 @@ export const SectionContact = styled.div`
 
 export const ContactTitle = styled.h2`
   text-align: center;
-  font-size: clamp(1rem, 13vw, 2rem);
+  font-size: clamp(1.3rem, 13vw, 3.1rem);
   line-height: 1.06;
   /* letter-spacing: 0.4rem; */
   padding-top: 100px;
   padding-bottom: 100px;
 `;
 
-export const ContactContainer = styled.div`
-  display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  /* display: block; */
-  /* grid-template-columns: repeat(2, 1fr); */
-  /* max-width: 1100px; */
-  /* min-width: 300px; */
-  border-radius: 15px;
-  overflow: hidden;
-  padding: 20px;
-  background: whitesmoke;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  @media screen and (max-width: 820px) {
-    flex-direction: column;
-  } ;
-`;
+// export const ContactContainer = styled.div`
+//   display: flex;
+//   /* flex-direction: column; */
+//   justify-content: center;
+//   align-items: center;
+//   position: relative;
+//   /* display: block; */
+//   /* grid-template-columns: repeat(2, 1fr); */
+//   /* max-width: 1100px; */
+//   /* min-width: 300px; */
+//   border-radius: 15px;
+//   overflow: hidden;
+//   padding: 20px;
+//   background: whitesmoke;
+//   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+//   @media screen and (max-width: 820px) {
+//     flex-direction: column;
+//   } ;
+// `;
 export const ContactInfo = styled.div`
   background-color: #1d609c;
   border-radius: 15px;
@@ -183,5 +182,17 @@ export const InputTextArea = styled.textarea`
   &:focus {
     border-bottom: 2px solid gray;
     outline: none;
+  }
+`;
+
+export const ContactContainer = styled.div`
+  width: 100%;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 20px;
+
+  @media screen and (max-width: 960px) {
+    padding: 0 5px;
   }
 `;

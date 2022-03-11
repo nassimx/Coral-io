@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { Link as LinkServ } from 'react-router-dom';
 
 export const FeatureTitle = styled.h2`
   text-align: center;
@@ -45,7 +46,7 @@ export const FeatureImageWrapper = styled.div`
   margin-bottom: 1rem;
   border-radius: 50%;
   /* border: 2px solid #cf1717; */
-  color: #5cacff;
+  color: #ff7f50;
   padding: 10px;
   :hover {
     /* color: white; */
@@ -70,5 +71,20 @@ export const FeatureText = styled.p`
   color: #626881;
   @media screen and (max-width: 768px) {
     display: none;
+  }
+`;
+
+export const LinkService = styled(LinkServ)`
+  text-decoration: none;
+  color: black;
+
+  cursor: pointer;
+
+  &:hover {
+    color: #cf1717;
+    transition: all 0.3s ease-out;
+  }
+  &active {
+    border-bottom: 3px solid #01bf71;
   }
 `;

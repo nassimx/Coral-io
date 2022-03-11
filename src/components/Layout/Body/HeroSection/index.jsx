@@ -11,8 +11,8 @@ import {
 } from './Hero.Style';
 import { Button } from '../../../../globalStyles';
 import { Link } from 'react-router-dom';
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../../../../firebase-config';
+import { useDispatch, useSelector } from 'react-redux';
+import { getHeroSection } from '../../../../redux/actions/posts';
 
 const Hero = ({}) => {
   const initial = {
@@ -25,22 +25,22 @@ const Hero = ({}) => {
     opacity: 1,
     scale: 1.5,
   };
-  const [section1, setSection1] = useState([]);
-  const sectionCollectionRef = collection(db, 'section1');
+
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    const getSectionData = async () => {
-      const data = await getDocs(sectionCollectionRef);
-      setSection1(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
-    getSectionData();
-  }, []);
+    dispatch(getHeroSection());
+  }, [dispatch]);
+
+  const posts = useSelector((state) => state.posts);
+  // console.log(posts);
   return (
     <>
-      {section1.map((el, index) => {
+      {posts.map((el, index) => {
         return (
-          <HeroContainer>
+          <HeroContainer key={index}>
             <HeroBg>
-              <VideoBg autoPlay loop muted src={el.video} />
+              <VideoBg autoPlay loop muted src={el.video} type="mp4/mpeg" />
             </HeroBg>
             <HeroContent>
               <HeroH1
@@ -51,7 +51,6 @@ const Hero = ({}) => {
                   scale: 1,
                   transition: { duration: 1 },
                 }}
-                key={index}
               >
                 {el.title}
               </HeroH1>

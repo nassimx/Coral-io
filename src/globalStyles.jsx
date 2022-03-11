@@ -16,6 +16,7 @@ export const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
   padding: 0 50px;
+
   @media screen and (max-width: 960px) {
     padding: 0 30px;
   }
@@ -179,6 +180,8 @@ export const HeroBg = styled.div`
   height: 100%;
   overflow: hidden;
 
+  /* transform: scale(0.5); */
+
   @media screen and (max-width: 960px) {
   }
 `;
@@ -189,6 +192,7 @@ export const ImgBg = styled.img`
   -o-object-fit: cover;
   object-fit: cover;
   background: #fff;
+  object-position: 43% 57%;
   @media screen and (max-width: 960px) {
     /* height: 30%; */
   }
@@ -233,6 +237,54 @@ export const HeroH1 = styled(motion.h1)`
   }
   @media screen and (max-width: 480px) {
     font-size: 32px;
+  }
+`;
+
+export const ButtonContact = styled.button`
+  border-radius: 4px;
+  background: none;
+  white-space: nowrap;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ff7f50;
+  outline: none;
+  border: 2px solid #ff7f50;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  &:before {
+    background: black;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &:hover:before {
+    height: 500%;
+  }
+  &:hover {
+    color: black;
+  }
+`;
+
+export const ServImgBg = styled.img`
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background: #fff;
+  object-position: 25% 75%;
+  @media screen and (max-width: 960px) {
+    /* height: 30%; */
+  }
+  @media screen and (max-width: 460px) {
+    /* height: 20%; */
   }
 `;
 

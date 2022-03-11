@@ -29,9 +29,12 @@ export const ImageWrapper = styled.div`
 export const ButtonContainer = styled(Row)`
   margin: 0px 0px 64px 0px;
   /* padding: 0 0 20px 0px; */
+
   & svg {
     margin: 0 1rem;
     cursor: pointer;
+    /* color: red; */
+    /* background-color: red; */
   }
   & svg:hover {
     opacity: 0.7;

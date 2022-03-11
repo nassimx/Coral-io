@@ -89,7 +89,7 @@ export const NavLinks = styled(LinkS)`
   font-family: 'Lato', sans-serif;
 
   &:hover {
-    color: #0a66c2;
+    color: #ff7f50;
     transition: all 0.3s ease-out;
   }
   &active {
@@ -115,7 +115,7 @@ export const NavLinkR = styled(LinkR)`
   font-family: 'Lato', sans-serif;
 
   &:hover {
-    color: #0a66c2;
+    color: #ff7f50;
     transition: all 0.3s ease-out;
   }
   &active {

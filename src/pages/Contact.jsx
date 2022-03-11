@@ -1,48 +1,59 @@
 import React from 'react';
-import { ContactTitle } from '../components/Contact/ContactStyle';
+import {
+  ContactContainer,
+  ContactTitle,
+} from '../components/Contact/ContactStyle';
 
-import img from '../../assets/bgimg.jpeg';
+import img from '../../assets/1080px.jpeg';
 
-import Container from '../components/Contact/Container';
+import ContainerContact from '../components/Contact/Container';
 
 import CompanyInfo from './Form/CompanyInfo';
-// import ContactForm from '../pages/Form/ContactForm';
+import ContactForm from '../pages/Form/ContactForm';
 
 import MapSection from '../components/Map/Map'; // import the map here
-import NavBarChange from '../components/Layout/Header/Navbar/NavBarChange';
+
 import {
+  Container,
   HeroBg,
   HeroContainer,
-  HeroContent,
-  HeroH1,
   ImgBg,
+  Section,
 } from '../globalStyles';
+import {
+  FeatureTextWrapper,
+  FeatureTitle,
+} from '../components/Layout/Body/ServicesSection/ServicesSection.Styles';
 
 const location = {
-  address: '1600 Amphitheatre Parkway, Mountain View, california.',
+  address: '231 Rue St Honoré, 75001 Paris, France',
   lat: 48.8661778,
   lng: 2.3291679,
 }; // our location object from earlier
 const Contact = () => {
   return (
     <>
-      <NavBarChange />
       <HeroContainer>
         <HeroBg>
           <ImgBg src={img} />
         </HeroBg>
-        <HeroContent>
-          <HeroH1>Contact</HeroH1>
-        </HeroContent>
       </HeroContainer>
-      <Container>
-        <ContactTitle>Contactez nous</ContactTitle>
+      <Section smPadding="50px 10px" position="relative" inverse>
+        <ContactContainer>
+          <FeatureTextWrapper>
+            <FeatureTitle>Nous Écrire</FeatureTitle>
+          </FeatureTextWrapper>
+          <ContainerContact wrapper>
+            <CompanyInfo />
 
-        <CompanyInfo />
+            <ContactForm />
+          </ContainerContact>
 
-        <ContactTitle>Siége</ContactTitle>
-        <MapSection location={location} zoomLevel={16} />
-      </Container>
+          <ContactTitle>Où nous retrouver</ContactTitle>
+
+          <MapSection location={location} zoomLevel={16} />
+        </ContactContainer>
+      </Section>
     </>
   );
 };

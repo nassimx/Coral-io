@@ -10,20 +10,20 @@ import {
   CarouselImage,
   // CardButton,
 } from './PartenairesSection.Style';
-import { db } from '../../../../firebase-config';
-import { collection, getDocs } from 'firebase/firestore';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { getPartenaires } from '../../../../redux/actions/posts';
 
 const PartenairesSection = () => {
   const [sliderRef, setSliderRef] = useState(null);
-  const [partenaires, setPartenaires] = useState([]);
-  const partenairesCollectionRef = collection(db, 'partenaires-section');
+
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    const getPartenairesData = async () => {
-      const data = await getDocs(partenairesCollectionRef);
-      setPartenaires(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
-    getPartenairesData();
-  }, []);
+    dispatch(getPartenaires());
+  }, [dispatch]);
+
+  const partenaires = useSelector((state) => state.partenaires);
 
   const sliderSettings = {
     arrows: false,
@@ -60,10 +60,10 @@ const PartenairesSection = () => {
     >
       <Row justify="space-between" margin="1rem" wrap="wrap">
         <Heading width="auto" inverse>
-          NOS PARTENAIRES
+          Nos Partenaires
         </Heading>
         <ButtonContainer>
-          <IconContext.Provider value={{ size: '3rem', color: '#1d609c' }}>
+          <IconContext.Provider value={{ size: '3rem', color: '#ff7f50' }}>
             <FaArrowCircleLeft onClick={sliderRef?.slickPrev} />
             <FaArrowCircleRight onClick={sliderRef?.slickNext} />
           </IconContext.Provider>
@@ -87,6 +87,5 @@ const PartenairesSection = () => {
     </Section>
   );
 };
-
 
 export default PartenairesSection;

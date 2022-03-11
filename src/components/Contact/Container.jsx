@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 import { css } from 'styled-components';
 
-const Container = styled.div`
+const ContainerContact = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: 1170px;
@@ -36,4 +36,4 @@ const Container = styled.div`
     `}
 `;
 
-export default Container;
+export default ContainerContact;

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 import { GrFacebook, GrLinkedin, GrMail } from 'react-icons/gr';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
+import { getContact } from '../../redux/actions/posts';
 
 const WrapperCompanyInfo = styled.div`
-  background: #1d609c;
+  background: #ff7f50;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 1.6rem;
@@ -103,58 +105,69 @@ export const IconCircle = styled.a`
     text-align: left;
   }
   :hover {
-    background: #ff7f50;
+    background: #cf1717;
   }
 `;
 
-const CompanyInfo = () => (
-  <WrapperCompanyInfo>
-    <CompanyName>Contact Information</CompanyName>
-    <WrapperList>
-      {/* <li>Address</li>
-      <li>Phone Number</li>
-      <li>Email</li> */}
+const CompanyInfo = () => {
+  const dispatch = useDispatch();
 
-      {/* <ContactText>Remplissez ce formulaire s'il vous plait</ContactText> */}
-      <ContactIconText>
-        <FaPhoneAlt />
-        <ContactSpan href="tel:+33188329801" target="_blank">
-          +33188329801
-        </ContactSpan>
-      </ContactIconText>
-      <ContactIconText>
-        <GrMail />
-        <ContactSpan href="mailto:contact@coral-io.fr" target="_blank">
-          contact@coral-io.fr
-        </ContactSpan>
-      </ContactIconText>
-      <ContactIconText>
-        <FaMapMarkerAlt />
-        <ContactSpan
-          href="https://goo.gl/maps/viQ5YDJdbAx6jPHZ7"
-          target="_blank"
-        >
-          231 rue Saint Honoré – <br /> 75001 Paris
-        </ContactSpan>
-      </ContactIconText>
-      <SocialMedia>
-        <IconCircle
-          href="https://www.linkedin.com/company/coralio/"
-          target="_blank"
-          aria-label="Linkedin"
-        >
-          <GrLinkedin />
-        </IconCircle>
-        <IconCircle
-          href="https://www.facebook.com/coralio.fr"
-          target="_blank"
-          aria-label="Facebook"
-        >
-          <GrFacebook />
-        </IconCircle>
-      </SocialMedia>
-    </WrapperList>
-  </WrapperCompanyInfo>
-);
+  useEffect(() => {
+    dispatch(getContact());
+  }, [dispatch]);
+
+  const contact = useSelector((state) => state.contact);
+  // console.log(contact);
+  return (
+    <>
+      {contact.map((el, index) => {
+        return (
+          <WrapperCompanyInfo key={index}>
+            <CompanyName>Vous souhaitez communiquer avec nous ?</CompanyName>
+            <WrapperList>
+              <ContactIconText>
+                <FaPhoneAlt />
+                <ContactSpan href="tel:+33188329801" target="_blank">
+                  {el.numtel}
+                </ContactSpan>
+              </ContactIconText>
+              <ContactIconText>
+                <GrMail />
+                <ContactSpan href="mailto:contact@coral-io.fr" target="_blank">
+                  {el.email}
+                </ContactSpan>
+              </ContactIconText>
+              <ContactIconText>
+                <FaMapMarkerAlt />
+                <ContactSpan
+                  href="https://goo.gl/maps/viQ5YDJdbAx6jPHZ7"
+                  target="_blank"
+                >
+                  {el.adresse}
+                </ContactSpan>
+              </ContactIconText>
+              <SocialMedia>
+                <IconCircle
+                  href="https://www.linkedin.com/company/coralio/"
+                  target="_blank"
+                  aria-label="Linkedin"
+                >
+                  <GrLinkedin />
+                </IconCircle>
+                <IconCircle
+                  href="https://www.facebook.com/coralio.fr"
+                  target="_blank"
+                  aria-label="Facebook"
+                >
+                  <GrFacebook />
+                </IconCircle>
+              </SocialMedia>
+            </WrapperList>
+          </WrapperCompanyInfo>
+        );
+      })}
+    </>
+  );
+};
 
 export default CompanyInfo;

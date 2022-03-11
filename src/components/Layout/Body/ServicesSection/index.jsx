@@ -1,20 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Container, Section } from '../../../../globalStyles';
 import {
-  FeatureText,
   FeatureTitle,
   FeatureWrapper,
   FeatureColumn,
   FeatureImageWrapper,
   FeatureName,
   FeatureTextWrapper,
+  LinkService,
 } from './ServicesSection.Styles';
-// import { featuresData } from '../../../../data/SecondSectionData';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../../../../firebase-config';
 
-const Features = () => {
+import { useDispatch, useSelector } from 'react-redux';
+import { getServiceData } from '../../../../redux/actions/posts';
+
+const Services = () => {
   const initial = {
     y: 40,
     opacity: 0,
@@ -23,48 +22,47 @@ const Features = () => {
     y: 0,
     opacity: 1,
   };
+  const dispatch = useDispatch();
 
-  const [services, setServices] = useState([]);
-  const servicesCollectionRef = collection(db, 'services');
   useEffect(() => {
-    const getServicesData = async () => {
-      const data = await getDocs(servicesCollectionRef);
-      setServices(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
-    getServicesData();
-  }, []);
+    dispatch(getServiceData());
+  }, [dispatch]);
+
+  const services = useSelector((state) => state.services);
   return (
     <Section smPadding="50px 10px" position="relative" inverse id="services">
       <Container>
         <FeatureTextWrapper>
-          <FeatureTitle>NOS SERVICES</FeatureTitle>
+          <FeatureTitle>Nos Services</FeatureTitle>
         </FeatureTextWrapper>
         <FeatureWrapper>
           {services.map((el, index) => (
-            <FeatureColumn
-              initial={initial}
-              animate={animate}
-              transition={{ duration: 1 + index * 0.2 }}
-              whileHover={{
-                scale: 1.1,
-                transition: { duration: 1 },
-              }}
-              whileTap={{ scale: 0.9 }}
-              key={index}
-            >
-              <FeatureImageWrapper className={el.imgClass}>
-                <FontAwesomeIcon icon={el.icon} size="4x" />
-                {/* {el.icon} */}
-              </FeatureImageWrapper>
-              <FeatureName>{el.name}</FeatureName>
-              <FeatureText>{el.description}</FeatureText>
-            </FeatureColumn>
+            <LinkService to={`/services/${el._id}`}>
+              <FeatureColumn
+                initial={initial}
+                animate={animate}
+                transition={{ duration: 1 + index * 0.2 }}
+                whileHover={{
+                  scale: 1.1,
+                  transition: { duration: 1 },
+                }}
+                whileTap={{ scale: 0.9 }}
+                key={index}
+              >
+                <FeatureImageWrapper className={el.imgClass}>
+                  <i className={el.icon}></i>
+
+                  {/* {el.icon} */}
+                </FeatureImageWrapper>
+                <FeatureName>{el.name}</FeatureName>
+                {/* <FeatureText>{el.description}</FeatureText> */}
+              </FeatureColumn>
+            </LinkService>
           ))}
-          {/* <h1>{services}</h1> */}
         </FeatureWrapper>
       </Container>
     </Section>
   );
 };
 
-export default Features;
+export default Services;

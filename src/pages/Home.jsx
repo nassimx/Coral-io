@@ -15,6 +15,7 @@ const Home = () => {
         animate={{ opacity: 1, x: 0, y: 0 }}
         exit={{ opacity: 0, x: 0, y: -100 }}
         transition={{ duration: 1 }}
+        key={Math.random()}
       >
         <Hero />
         <ServicesSection />

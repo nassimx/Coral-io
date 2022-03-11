@@ -43,7 +43,7 @@ const Sidebar = ({ isOpen, toggle }) => {
               duration={1000}
               spy={true}
               offset={-80}
-              activeClass="active"
+
               onClick={toggle}
             >
               Nos Services
